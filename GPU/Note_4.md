@@ -22,6 +22,11 @@ __global__ void add(float* a, float* b, float* c, int n) {
 // 启动：派 3 组，每组 4 个线程
 add<<<3, 4>>>(d_a, d_b, d_c, n)
 ```
+Other threads will be out of bound unless it has boundary check.
+
+<img width="2033" height="607" alt="7e33661f0df2dfd832c90afd2ef7c3c8" src="https://github.com/user-attachments/assets/97036a81-747e-44c4-86c7-34d9b83f51f8" />
+
+
 >[!NOTE]
 >The theory of it:
 >
